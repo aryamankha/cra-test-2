@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 
+if (process.env.NODE_ENV === "development") {
+  import("vivid-studio").then((v) => v.run());
+  import("vivid-studio/style");
+}
+
 const App = () => {
   return (
     <main className="w-screen h-screen bg-black flex items-center justify-center flex-col gap-5">
